@@ -1,11 +1,29 @@
 <mat-card>
   <mat-card-title>Student form</mat-card-title>
-  <mat-card-content>
+  <mat-card-content class="d-flex flex-column">
 
     <mat-form-field appearance="fill">
       <mat-label>Imie:</mat-label>
-      <input matInput type="text" placeholder="Imie:" [(ngModel)]="student.firstName">
+      <input matInput type="text" placeholder="Imie:" [(ngModel)]="request.firstName">
     </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nazwisko:</mat-label>
+      <input matInput type="text" placeholder="Nazwisko:" [(ngModel)]="request.lastName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Wiek:</mat-label>
+      <input matInput type="text" placeholder="Wiek:" [(ngModel)]="request.age">
+    </mat-form-field>
+
+    <button mat-icon-button
+            matTooltip="Warn"
+            color="warn"
+            aria-label="Send create student request"
+            (click)="send()">
+      <mat-icon>send</mat-icon>
+    </button>
 
   </mat-card-content>
 </mat-card>

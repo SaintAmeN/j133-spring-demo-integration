@@ -4,3 +4,9 @@ export type Student = {
   nazwisko: string
   wiek: number
 }
+
+export type CreateStudentRequest = {
+  firstName: string
+  lastName: string
+  age: number
+}

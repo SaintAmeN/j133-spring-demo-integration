@@ -8,13 +8,17 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatCardModule} from "@angular/material/card";
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
+import {AppRoutingModule} from "./app-routing.module";
+import { StudentFormComponent } from './student-form/student-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentFormComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
